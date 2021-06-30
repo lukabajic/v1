@@ -1,8 +1,7 @@
 <template>
     <div>
-      <img :src="repo.owner.avatar_url"/>
+      <img :src="repo.owner.avatar_url" alt="avatar"/>
       <h3>{{ repo.name }}</h3>
-      <!-- <button @click="$emit('view-contributors', repo)">View Contributors</button> -->
       <Contributors :repo="repo"/>
     </div>
 </template>
@@ -17,11 +16,6 @@ export default {
   components: {
     Contributors
 
-  },
-  data() {
-    return {
-      showContributors: false,
-    };
   },
 };
 </script>

@@ -1,10 +1,12 @@
 <template>
-  <button @click="getContributors" >View Contibutors</button>
-  <div :key="contributor.id" v-for="contributor in contributors">
-    <div class="contributor">
-      <img :src="contributor.avatar_url" alt="" />
-      <p>{{ contributor.login }}</p>
-    </div>
+  <button @click="getContributors">View Contibutors</button>
+  <div
+    :key="contributor.id"
+    v-for="contributor in contributors"
+    class="contributor"
+  >
+    <img :src="contributor.avatar_url" alt="avatar" />
+    <p>{{ contributor.login }}</p>
   </div>
 </template>
 
@@ -34,11 +36,24 @@ export default {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
-  width: 80%;
-  align-items: center;
+  padding: 5px 35px;
+  //  width: 60%;
+  // height: 60%;
+  // align-items: center;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // background-color: #2c3e50;
+  // z-index: 2;
+  // border: 2px solid #42b983;
+  // border-radius: 10px;
 
   p {
-    flex: 1;
+    flex: .9;
+    text-align: left;
+    width: 50%;
+
   }
 
   img {
